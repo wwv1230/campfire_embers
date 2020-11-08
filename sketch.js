@@ -11,7 +11,7 @@ function draw() {
 
   background(20,20,70);;
 
-  fill(255,100,0);
+  fill(241,95,95);
   beginShape();
 
   let xoff = 0;
@@ -58,7 +58,7 @@ class Particle {
 
   show() {
     noStroke
-    fill(255,150,0);
+    fill(241,95,95);
     ellipse(this.pos.x, this.pos.y, 12, 12);
     if (this.pos.y > height) {
     this.pos = createVector(width / 2, height / 2);
