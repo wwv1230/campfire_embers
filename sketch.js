@@ -7,7 +7,7 @@ function setup() {
   createCanvas(700, 400);
   particle = new Particle();
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 70; i++) {
 stars.push(new Star());
 }
 }
@@ -55,7 +55,14 @@ class Star {
 
   display() {
     ellipse(this.x,this.y,this.diameter);
-    fill(255,228,0);
+
+    let s = random(1);
+if (s > 0.5){
+fill(255,228,0);
+}
+else {
+  fill(20,20,70);
+}
   }
 }
 
