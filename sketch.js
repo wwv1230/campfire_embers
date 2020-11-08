@@ -1,15 +1,24 @@
 let particle;
 let yoff = 0.0;
+let stars = [];
 
 function setup() {
 
   createCanvas(700, 400);
   particle = new Particle();
+
+for (let i = 0; i < 50; i++) {
+stars.push(new Star());
+}
 }
 
 function draw() {
 
   background(20,20,70,30);
+
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].display();
+   }
 
   fill(random(200,255),95,95);
   beginShape();
@@ -35,6 +44,19 @@ function draw() {
   particle.show();
 
 
+}
+
+class Star {
+  constructor() {
+    this.x = random(width);
+    this.y = random(height);
+    this.diameter = 5;
+  }
+
+  display() {
+    ellipse(this.x,this.y,this.diameter);
+    fill(255,228,0);
+  }
 }
 
 class Particle {
