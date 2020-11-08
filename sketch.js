@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
 
-  background(20,20,70);;
+  background(20,20,70,30);
 
   fill(241,95,95);
   beginShape();
